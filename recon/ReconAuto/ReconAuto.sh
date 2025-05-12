@@ -55,5 +55,10 @@ fi
 echo "[***]HOST"
 host $domain > recon/$domain/host.txt
 
+# === NMAP ===
+echo "[***]NMAP"
+nmap -Pn -sV -sC -T4 $domain > recon/$domain/nmap_results.txt
+
+
 # === END ===
 echo "[***]Recon finish"
